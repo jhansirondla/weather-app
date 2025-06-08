@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Weather App</h2>
+
+  <div>
+    <input type="text" id="location" placeholder="Enter location">
+    <button onclick="getWeather()">Get Weather</button>
+  </div>
+
+  <div id="weatherResult" style="margin: 16px 0; font-weight: bold;"></div>
+
+  <h3>Saved Weather Entries</h3>
+  <button onclick="loadSaved()">Refresh Saved Data</button>
+  <ul id="savedList"></ul>
+
+  <h3>Update Entry</h3>
+  <input type="number" id="updateId" placeholder="ID">
+  <input type="number" id="updateTemp" placeholder="New Temperature">
+  <button onclick="updateEntry()">Update</button>
+
+  <h3>Delete Entry</h3>
+  <input type="number" id="deleteId" placeholder="ID">
+  <button onclick="deleteEntry()">Delete</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
